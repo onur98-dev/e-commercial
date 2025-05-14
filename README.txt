@@ -30,4 +30,11 @@ Product data is fetched from:https://fakestoreapi.com/
 
 --Huge thanks!
 
+--This is an ongoing project. Upcoming updates will include:
+
+ Login and logout functionality
+
+ A more visually appealing and polished design
+
+Stay tuned for more improvements!
 
