@@ -18,7 +18,7 @@ function productList() {
 
 
     return (
-        <div className='flex-row' style={{ flexWrap: 'wrap' }}>
+        <div className='flex-row' style={{ flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
             {
                 products && products.map((product) => (
                     <Product key={product.id} product={product} />

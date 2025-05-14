@@ -8,6 +8,7 @@ import Drawer from '@mui/material/Drawer';
 import { useDispatch, useSelector } from 'react-redux'
 import { calculateBasket, calculateReducedBasket, removeFromBasket, setDrawer } from './redux/slices/basketSlice'
 import { useEffect } from 'react'
+import { TiDelete } from "react-icons/ti";
 
 function App() {
 
@@ -19,6 +20,9 @@ function App() {
     dispatch(calculateBasket())
   }, [])
 
+  const closeDrawer = () => {
+    dispatch(setDrawer());
+  }
 
 
   return (
@@ -31,6 +35,7 @@ function App() {
             <RouterConfig />
             <Product />
             <Drawer anchor='right' open={drawer} onClose={() => { dispatch(setDrawer()) }} className='drawer' style={{ padding: '20px' }}>
+              <TiDelete style={{ color: 'red', fontSize: '30px', cursor: 'pointer' }} onClick={() => dispatch(setDrawer())} />
               {
                 products && products.map((product) => {
 

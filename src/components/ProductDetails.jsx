@@ -67,9 +67,10 @@ function ProductDetails() {
 
     return (
 
-        <div style={{ display: 'flex', flexDirection: 'row', marginTop: '40px', fontFamily: 'arial' }}>
+        <div className='flex-row' style={{
+        }}>
             <div style={{ marginRight: '40px' }}>
-                <img style={{ height: '500px', width: '500px' }} src={image} alt=''></img>
+                <img style={{ height: '400px', width: '400px' }} src={image} alt=''></img>
             </div>
             <div />
             <div>

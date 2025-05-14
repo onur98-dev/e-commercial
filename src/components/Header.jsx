@@ -7,7 +7,7 @@ import Badge from '@mui/material/Badge';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDrawer } from '../redux/slices/basketSlice';
 import { FcSearch } from "react-icons/fc";
-
+import '../css/Header.css'
 
 function Header() {
 
@@ -46,26 +46,25 @@ function Header() {
                 <h5 style={{ fontWeight: '550' }}>Sarıaslan Group</h5>
             </div>
             <div className='right-side'>
-                <div className='flex-row' style={{ position: 'relative', width: '100%' }}>
-
-                    <input id='searchInput' className='searchBar' type='search' placeholder='Search for products...'
-
-
-                    />      <FcSearch className='searchIcon' />
-
-
-                    <Badge badgeContent={products.length} color="success">
-                        <IoBasketSharp className='icon' style={{ marginLeft: '45px', marginTop: '-8px', fontSize: '25px' }} onClick={() => { dispatch(setDrawer()) }} />
-                    </Badge>
-                    <div className='theme' >
-                        {theme ? <MdOutlineBrightness3 className='dark-mode' onClick={toggleTheme} style={{ marginLeft: '30px' }} /> : <BsBrightnessHigh className='bright-mode' onClick={toggleTheme} style={{ marginLeft: '30px' }} />}
-
-                    </div>
+                <div className='flex-row'>
+                    <input
+                        id='searchInput'
+                        className='searchBar'
+                        type='search'
+                        placeholder='Search for products...'
+                    />
                 </div>
+                <Badge badgeContent={products.length} color="success">
+                    <IoBasketSharp className='icon' style={{ marginLeft: '45px', marginTop: '-8px', fontSize: '25px' }} onClick={() => { dispatch(setDrawer()) }} />
+                </Badge>
+                <div className='theme' >
+                    {theme ? <MdOutlineBrightness3 className='dark-mode' onClick={toggleTheme} style={{ marginLeft: '30px' }} /> : <BsBrightnessHigh className='bright-mode' onClick={toggleTheme} style={{ marginLeft: '30px' }} />}
 
+                </div>
             </div>
 
         </div>
+
     )
 }
 
